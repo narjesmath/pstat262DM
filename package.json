@@ -1,0 +1,21 @@
+{
+  "name": "pstat262dm_pres",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "npm run copy-images && vite",
+    "build": "npm run copy-images && vite build",
+    "copy-images": "mkdir -p public/img && cp -r src/img/* public/img/ 2>/dev/null || true",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^8.0.0-beta.13"
+  },
+  "overrides": {
+    "vite": "^8.0.0-beta.13"
+  },
+  "dependencies": {
+    "reveal.js": "^6.0.0"
+  }
+}
