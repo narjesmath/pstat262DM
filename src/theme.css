@@ -264,6 +264,41 @@
   letter-spacing: 0.03em;
 }
 
+/* ── Zoom hint (Reveal.js Zoom plugin: Alt+click to zoom) ─── */
+.reveal .slide-figure,
+.reveal .image-frame,
+.reveal .results-figure,
+.reveal .unet-figure,
+.reveal .dm-card-gif {
+  cursor: zoom-in;
+  position: relative;
+}
+.reveal .slide-figure::after,
+.reveal .image-frame::after,
+.reveal .results-figure::after,
+.reveal .unet-figure::after,
+.reveal .dm-card-gif::after {
+  content: 'Alt+click to zoom';
+  position: absolute;
+  bottom: 4px;
+  right: 8px;
+  font-size: 0.5em;
+  color: #94a3b8;
+  background: rgba(255,255,255,0.9);
+  padding: 2px 6px;
+  border-radius: 4px;
+  opacity: 0;
+  transition: opacity 0.2s;
+  pointer-events: none;
+}
+.reveal .slide-figure:hover::after,
+.reveal .image-frame:hover::after,
+.reveal .results-figure:hover::after,
+.reveal .unet-figure:hover::after,
+.reveal .dm-card-gif:hover::after {
+  opacity: 1;
+}
+
 /* ── Data overview: GitHub source link ───────────────── */
 .reveal .github-source-link {
   display: inline-flex;
@@ -771,13 +806,19 @@
   overflow-y: auto;
 }
 .reveal .results-summary-slide .slide-table--compact {
-  font-size: 0.6em;
+  font-size: 0.78em;
+}
+.reveal .results-summary-slide .slide-sub {
+  font-size: 0.95em;
 }
 .reveal .results-summary-slide .three-col {
   margin-top: 12px;
 }
 .reveal .results-summary-slide .limit-card .card-heading {
   margin-bottom: 4px;
+}
+.reveal .results-summary-slide .limit-card .small {
+  font-size: 0.95em;
 }
 
 /* ── Main Results Visual (diffusion_results image) ───── */
@@ -1251,7 +1292,33 @@
   width: 100%;
   height: auto;
   display: block;
-  max-height: 280px;
+  max-height: 380px;
+}
+.reveal .net-label-box {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 6px 10px;
+  background: #f8fafc;
+  border: 1px solid #dbeafe;
+  border-radius: 6px;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 8px;
+  line-height: 1.35;
+  color: #64748b;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.reveal .net-label-title {
+  font-weight: 600;
+  color: #475569;
+  font-size: 9px;
+}
+.reveal .net-label-desc {
+  font-size: 7.5px;
+  color: #64748b;
 }
 
 /* ── Links ──────────────────────────────────────────── */

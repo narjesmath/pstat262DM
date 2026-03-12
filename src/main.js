@@ -430,7 +430,7 @@ document.querySelector('#app').innerHTML = `
         <h2>Situating Aich et al. in the Generative Landscape</h2>
         <p class="slide-sub">Connecting Methodologies Across Domains</p>
         <div class="net-wrap mt-md">
-          <svg viewBox="0 0 860 390" class="net-svg" xmlns="http://www.w3.org/2000/svg">
+          <svg viewBox="0 0 860 520" class="net-svg" xmlns="http://www.w3.org/2000/svg">
             <defs>
               <marker id="arr" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
                 <path d="M0,0 L0,6 L6,3 z" fill="#94a3b8"/>
@@ -439,38 +439,58 @@ document.querySelector('#app').innerHTML = `
 
             <!-- Edge: Aich → ScoreGrad -->
             <line x1="340" y1="165" x2="210" y2="85" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#arr)"/>
-            <rect x="220" y="108" width="120" height="22" rx="4" fill="#f8fafc" stroke="#dbeafe"/>
-            <text x="280" y="123" text-anchor="middle" font-size="9" fill="#64748b" font-family="IBM Plex Sans,sans-serif">Spatial vs Recurrent</text>
+            <foreignObject x="120" y="108" width="170" height="58">
+              <div xmlns="http://www.w3.org/1999/xhtml" class="net-label-box">
+                <span class="net-label-title">Spatial vs Recurrent</span>
+                <span class="net-label-desc">climate images vs sequential time series</span>
+              </div>
+            </foreignObject>
 
             <!-- Edge: Aich → SBTS -->
-            <line x1="340" y1="195" x2="210" y2="305" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#arr)"/>
-            <rect x="218" y="238" width="130" height="22" rx="4" fill="#f8fafc" stroke="#dbeafe"/>
-            <text x="283" y="253" text-anchor="middle" font-size="9" fill="#64748b" font-family="IBM Plex Sans,sans-serif">Static Map vs Transport</text>
+            <line x1="340" y1="195" x2="210" y2="365" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#arr)"/>
+            <foreignObject x="168" y="268" width="220" height="58">
+              <div xmlns="http://www.w3.org/1999/xhtml" class="net-label-box">
+                <span class="net-label-title">Static Map vs Transport</span>
+                <span class="net-label-desc">Aich learns a static mapping through an embedding space; SBTS uses dynamic transport between marginals</span>
+              </div>
+            </foreignObject>
 
             <!-- Edge: Aich → Chen -->
             <line x1="520" y1="165" x2="650" y2="85" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#arr)"/>
-            <rect x="520" y="108" width="130" height="22" rx="4" fill="#f8fafc" stroke="#dbeafe"/>
-            <text x="585" y="123" text-anchor="middle" font-size="9" fill="#64748b" font-family="IBM Plex Sans,sans-serif">Marginal vs Systematic</text>
+            <foreignObject x="535" y="108" width="180" height="58">
+              <div xmlns="http://www.w3.org/1999/xhtml" class="net-label-box">
+                <span class="net-label-title">Marginal vs Systematic</span>
+                <span class="net-label-desc">Aich uses QDM to align marginals; finance papers use factor models to separate systematic structure</span>
+              </div>
+            </foreignObject>
 
             <!-- Edge: Aich → Gao -->
-            <line x1="520" y1="195" x2="650" y2="305" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#arr)"/>
-            <rect x="520" y="238" width="120" height="22" rx="4" fill="#f8fafc" stroke="#dbeafe"/>
-            <text x="580" y="253" text-anchor="middle" font-size="9" fill="#64748b" font-family="IBM Plex Sans,sans-serif">Exogenous Anchors</text>
+            <line x1="520" y1="195" x2="650" y2="365" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#arr)"/>
+            <foreignObject x="495" y="268" width="180" height="58">
+              <div xmlns="http://www.w3.org/1999/xhtml" class="net-label-box">
+                <span class="net-label-title">Exogenous Anchors</span>
+                <span class="net-label-desc">finance conditions on factors; Aich conditions on coarse climate structure</span>
+              </div>
+            </foreignObject>
 
             <!-- Edge: Aich → Uehara -->
-            <line x1="430" y1="215" x2="430" y2="318" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#arr)"/>
-            <rect x="355" y="260" width="150" height="22" rx="4" fill="#f8fafc" stroke="#dbeafe"/>
-            <text x="430" y="275" text-anchor="middle" font-size="9" fill="#64748b" font-family="IBM Plex Sans,sans-serif">Input vs Output (RL)</text>
+            <line x1="430" y1="215" x2="430" y2="418" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#arr)"/>
+            <foreignObject x="310" y="338" width="240" height="58">
+              <div xmlns="http://www.w3.org/1999/xhtml" class="net-label-box">
+                <span class="net-label-title">Input vs Output (RL)</span>
+                <span class="net-label-desc">Aich uses diffusion to generate output fields; RL papers use diffusion as a prior or policy-related object</span>
+              </div>
+            </foreignObject>
 
             <!-- Edge: ScoreGrad → SBTS -->
-            <line x1="130" y1="100" x2="130" y2="295" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#arr)"/>
-            <rect x="50" y="190" width="108" height="22" rx="4" fill="#f8fafc" stroke="#dbeafe"/>
-            <text x="104" y="205" text-anchor="middle" font-size="9" fill="#64748b" font-family="IBM Plex Sans,sans-serif">Generative Time-Series</text>
+            <line x1="130" y1="100" x2="130" y2="355" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#arr)"/>
+            <rect x="50" y="225" width="108" height="22" rx="4" fill="#f8fafc" stroke="#dbeafe"/>
+            <text x="104" y="240" text-anchor="middle" font-size="9" fill="#64748b" font-family="IBM Plex Sans,sans-serif">Generative Time-Series</text>
 
             <!-- Edge: Chen → Gao -->
-            <line x1="730" y1="100" x2="730" y2="295" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#arr)"/>
-            <rect x="678" y="190" width="104" height="22" rx="4" fill="#f8fafc" stroke="#dbeafe"/>
-            <text x="730" y="205" text-anchor="middle" font-size="9" fill="#64748b" font-family="IBM Plex Sans,sans-serif">Financial Factors</text>
+            <line x1="730" y1="100" x2="730" y2="355" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#arr)"/>
+            <rect x="678" y="225" width="104" height="22" rx="4" fill="#f8fafc" stroke="#dbeafe"/>
+            <text x="730" y="240" text-anchor="middle" font-size="9" fill="#64748b" font-family="IBM Plex Sans,sans-serif">Financial Factors</text>
 
             <!-- Node: Aich (center, navy) -->
             <rect x="340" y="140" width="180" height="75" rx="10" fill="#1a3560" stroke="#1e5fa8" stroke-width="2"/>
@@ -484,9 +504,9 @@ document.querySelector('#app').innerHTML = `
             <text x="130" y="91" text-anchor="middle" font-size="10" fill="#86efac" font-family="IBM Plex Sans,sans-serif">TS Feature Extraction</text>
 
             <!-- Node: SBTS (bottom-left, purple) -->
-            <rect x="50" y="295" width="160" height="60" rx="8" fill="#3b0764" stroke="#7c3aed" stroke-width="1.5"/>
-            <text x="130" y="320" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff" font-family="IBM Plex Serif,serif">Hamdouche (SBTS)</text>
-            <text x="130" y="338" text-anchor="middle" font-size="10" fill="#d8b4fe" font-family="IBM Plex Sans,sans-serif">Optimal Transport</text>
+            <rect x="50" y="355" width="160" height="60" rx="8" fill="#3b0764" stroke="#7c3aed" stroke-width="1.5"/>
+            <text x="130" y="380" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff" font-family="IBM Plex Serif,serif">Hamdouche (SBTS)</text>
+            <text x="130" y="398" text-anchor="middle" font-size="10" fill="#d8b4fe" font-family="IBM Plex Sans,sans-serif">Optimal Transport</text>
 
             <!-- Node: Chen (top-right, green) -->
             <rect x="650" y="48" width="160" height="60" rx="8" fill="#14532d" stroke="#16a34a" stroke-width="1.5"/>
@@ -494,14 +514,14 @@ document.querySelector('#app').innerHTML = `
             <text x="730" y="91" text-anchor="middle" font-size="10" fill="#86efac" font-family="IBM Plex Sans,sans-serif">Diffusion Factor Models</text>
 
             <!-- Node: Gao (bottom-right, green) -->
-            <rect x="650" y="295" width="160" height="60" rx="8" fill="#14532d" stroke="#16a34a" stroke-width="1.5"/>
-            <text x="730" y="320" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff" font-family="IBM Plex Serif,serif">Gao et al. (2025)</text>
-            <text x="730" y="338" text-anchor="middle" font-size="10" fill="#86efac" font-family="IBM Plex Sans,sans-serif">Factor Conditional Portfolios</text>
+            <rect x="650" y="355" width="160" height="60" rx="8" fill="#14532d" stroke="#16a34a" stroke-width="1.5"/>
+            <text x="730" y="380" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff" font-family="IBM Plex Serif,serif">Gao et al. (2025)</text>
+            <text x="730" y="398" text-anchor="middle" font-size="10" fill="#86efac" font-family="IBM Plex Sans,sans-serif">Factor Conditional Portfolios</text>
 
             <!-- Node: Uehara/Yoon (bottom-center, amber) -->
-            <rect x="340" y="318" width="180" height="60" rx="8" fill="#451a03" stroke="#ca8a04" stroke-width="1.5"/>
-            <text x="430" y="343" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff" font-family="IBM Plex Serif,serif">Uehara / Yoon / Yuan</text>
-            <text x="430" y="361" text-anchor="middle" font-size="10" fill="#fde68a" font-family="IBM Plex Sans,sans-serif">RL &amp; Entropy Control</text>
+            <rect x="340" y="418" width="180" height="60" rx="8" fill="#451a03" stroke="#ca8a04" stroke-width="1.5"/>
+            <text x="430" y="443" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff" font-family="IBM Plex Serif,serif">Uehara / Yoon / Yuan</text>
+            <text x="430" y="461" text-anchor="middle" font-size="10" fill="#fde68a" font-family="IBM Plex Sans,sans-serif">RL &amp; Entropy Control</text>
           </svg>
         </div>
         <table class="slide-table slide-table--compact mt-md">
