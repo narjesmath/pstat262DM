@@ -4,6 +4,7 @@ node_modules
 # Build output
 dist
 dist-ssr
+docs
 
 # Generated at build (copied from src/img)
 public/img

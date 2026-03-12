@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project deploys to GitHub Pages via GitHub Actions. The workflow builds the Vite app and pushes the `dist` folder to the `gh-pages` branch.
+This project deploys to GitHub Pages via GitHub Actions. The workflow builds the Vite app and commits the output to the `docs/` folder on `main`.
 
 **Live URL:** https://narjesmath.github.io/pstat262DM/
 
@@ -20,7 +20,7 @@ This project deploys to GitHub Pages via GitHub Actions. The workflow builds the
 1. **Configure GitHub Pages**
    - Repo → **Settings** → **Pages**
    - Under **Build and deployment**, set **Source** to **Deploy from a branch**
-   - Set **Branch** to `gh-pages` and folder to `/ (root)`
+   - Set **Branch** to `main` and folder to `/docs`
    - Click **Save**
 
 2. **Push to trigger deploy**
@@ -37,7 +37,7 @@ This project deploys to GitHub Pages via GitHub Actions. The workflow builds the
 
 - **Workflow:** `.github/workflows/deploy.yml`
 - **Build:** `npm run build` produces `dist/` with base path `/pstat262DM/`
-- **Deploy:** `peaceiris/actions-gh-pages` pushes `dist/` to the `gh-pages` branch
+- **Deploy:** Copies `dist/` to `docs/` and commits to `main`
 - **Base path:** `vite.config.js` sets `base: '/pstat262DM/'` for correct asset URLs
 
 ---

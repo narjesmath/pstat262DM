@@ -318,7 +318,7 @@ document.querySelector('#app').innerHTML = `
               <tr>
                 <td>Large-scale preservation (ERA5)</td>
                 <td><strong>SSIM = 0.85</strong>, <strong>Pearson r = 0.95</strong></td>
-                <td>Large-scale patterns are preserved during reconstruction</td>
+                <td>SSIM (Structural Similarity Index Measure) quantifies how well spatial structure is preserved; here, 0.85 indicates strong retention of large-scale precipitation patterns.</td>
               </tr>
               <tr>
                 <td>Climatology bias</td>
