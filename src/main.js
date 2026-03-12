@@ -13,7 +13,7 @@ document.querySelector('#app').innerHTML = `
         <h1>Conditional Diffusion Models for Downscaling &amp; Bias Correction of ESM Precipitation</h1>
         <h3>Aich et al. (2024/2026) <sup>[1]</sup></h3>
         <p>Narjes Mathlouthi</p>
-        <img src="/img/ddpm.gif" alt="DDPM" class="title-slide-gif">
+        <img src="${import.meta.env.BASE_URL}img/ddpm.gif" alt="DDPM" class="title-slide-gif">
       </section>
 
       <!-- 2. Motivation (keep) -->
@@ -27,7 +27,7 @@ document.querySelector('#app').innerHTML = `
             <li>Conditional diffusion models can be used to downscale and bias correct ESM precipitation.</li>
           </ul>
           <figure class="slide-figure">
-            <img src="/img/motivation.png" alt="Workflow Overview">
+            <img src="${import.meta.env.BASE_URL}img/motivation.png" alt="Workflow Overview">
             <figcaption>Fig. 1. Workflow overview: from coarse ESM to downscaled, bias-corrected precipitation.</figcaption>
           </figure>
         </div>
@@ -96,7 +96,7 @@ document.querySelector('#app').innerHTML = `
         <div class="three-col mt-lg">
           <div class="card card--blue">
             <div class="core-challenge-logo">
-              <img src="/era5-logo.png" alt="ERA5" class="core-challenge-icon">
+              <img src="${import.meta.env.BASE_URL}era5-logo.png" alt="ERA5" class="core-challenge-icon">
             </div>
             <h4 class="card-heading blue">OBS (ERA5)</h4>
             <p class="small muted">High resolution, accurate</p>
@@ -109,7 +109,7 @@ document.querySelector('#app').innerHTML = `
           <div class="card card--orange">
             <div class="core-challenge-logo">
               <a href="https://commons.wikimedia.org/w/index.php?curid=3703247" target="_blank" rel="noopener" title="GFDL logo by Eric Marshall, Public Domain">
-                <img src="/gfdl-logo.svg" alt="GFDL NOAA" class="core-challenge-icon">
+                <img src="${import.meta.env.BASE_URL}gfdl-logo.svg" alt="GFDL NOAA" class="core-challenge-icon">
               </a>
             </div>
             <h4 class="card-heading orange">ESM (GFDL)</h4>
@@ -127,7 +127,7 @@ document.querySelector('#app').innerHTML = `
         <h2>ERA5 vs GFDL</h2>
         <p class="slide-sub">Observations vs Earth System Model</p>
         <figure class="image-frame mt-lg">
-          <img src="/img/gfdl_era5.png" alt="ERA5 and GFDL comparison">
+          <img src="${import.meta.env.BASE_URL}img/gfdl_era5.png" alt="ERA5 and GFDL comparison">
           <figcaption>Fig. 2. Side-by-side comparison of ERA5 reanalysis (observations) and GFDL-ESM4 model output for the same region and time period.</figcaption>
         </figure>
       </section>
@@ -258,7 +258,7 @@ document.querySelector('#app').innerHTML = `
               <li><strong>$\\sigma_t z$</strong> — stochastic term (optional, zero for DDIM)</li>
             </ul>
             <figure class="dm-card-gif mt-sm">
-              <img src="/img/image8.gif" alt="Reverse denoising process">
+              <img src="${import.meta.env.BASE_URL}img/image8.gif" alt="Reverse denoising process">
               <figcaption>Fig. 4. Reverse process: iterative denoising to recover the clean image.</figcaption>
             </figure>
           </div>
@@ -275,7 +275,7 @@ document.querySelector('#app').innerHTML = `
         <p class="slide-sub">Encoder–decoder architecture with skip connections for spatial detail recovery</p>
         <div class="unet-layout mt-md">
           <figure class="unet-figure">
-            <img src="/img/aich_ddpm_architecture.png" alt="Aich et al. DDPM architecture">
+            <img src="${import.meta.env.BASE_URL}img/aich_ddpm_architecture.png" alt="Aich et al. DDPM architecture">
             <figcaption>Fig. 5. U-Net architecture for conditional diffusion (Aich et al. <sup>[1]</sup>; Palette-style <sup>[12]</sup>).</figcaption>
           </figure>
           <div class="unet-notes">
@@ -374,7 +374,7 @@ document.querySelector('#app').innerHTML = `
         <h2>Main Results — Climate Change Signal Over South America</h2>
         <p class="slide-sub">Projected relative change: diffusion-model downscaled (0.25°) vs. original GFDL (1°)</p>
         <figure class="results-figure mt-md">
-          <img src="/img/diffusion_results.png" alt="Climate change signal comparison">
+          <img src="${import.meta.env.BASE_URL}img/diffusion_results.png" alt="Climate change signal comparison">
           <figcaption>Fig. 6. Projected relative climate-change signal over South America: diffusion-model downscaled output at 0.25° versus original coarse GFDL at 1°.</figcaption>
         </figure>
         <div class="results-figure-notes mt-md">
