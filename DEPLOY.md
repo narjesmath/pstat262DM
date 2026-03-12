@@ -1,37 +1,42 @@
-# Deploy to GitHub Pages
+# Deploy Your Presentation
 
-## Make the repo private (optional)
+GitHub Pages **does not support private repos** on free accounts. Use **Netlify** to deploy from a private repo.
 
-1. Go to your repo: https://github.com/narjesmath/pstat262DM
-2. **Settings** → **General** → scroll to **Danger Zone**
-3. Click **Change repository visibility** → **Make private**
+---
 
-The source code will be private; the live presentation at https://narjesmath.github.io/pstat262DM/ remains publicly viewable (anyone with the link can see it).
+## Option A: Netlify (works with private repo)
 
-## Setup
+1. **Make your repo private** (optional):
+   - GitHub → repo **Settings** → **Danger Zone** → **Make private**
 
-1. **Initialize git and push to your repo:**
-   ```bash
-   git init
-   git add .
-   git commit -m "Initial commit"
-   git branch -M main
-   git remote add origin https://github.com/narjesmath/pstat262DM.git
-   git push -u origin main
-   ```
+2. **Deploy to Netlify:**
+   - Go to [netlify.com](https://netlify.com) and sign up (free)
+   - Click **Add new site** → **Import an existing project**
+   - Choose **GitHub** and authorize Netlify
+   - Select your repo `pstat262DM` (private repos work)
+   - Build settings (auto-detected from `netlify.toml`):
+     - Build command: `npm run build`
+     - Publish directory: `dist`
+   - Add environment variable: `VITE_BASE_URL` = `/`
+   - Click **Deploy site**
 
-2. **Enable GitHub Pages:**
-   - Go to your repo: https://github.com/narjesmath/pstat262DM
-   - **Settings** → **Pages**
-   - Under **Build and deployment**, set **Source** to **GitHub Actions**
+3. **Your site** will be at `https://[your-site-name].netlify.app`
 
-3. **Deploy:** The workflow runs automatically on every push to `main`. After it completes, your presentation will be live at:
+4. **Custom URL** (optional): In Netlify → Domain settings → change to `pstat262dm.netlify.app` or add a custom domain.
 
-   **https://narjesmath.github.io/pstat262DM/**
+---
 
-## Manual deploy (optional)
+## Option B: GitHub Pages (repo must be public)
 
-To build locally and preview:
+If you keep the repo **public**, GitHub Pages works:
+
+1. **Settings** → **Pages** → **Source**: GitHub Actions
+2. Site: **https://narjesmath.github.io/pstat262DM/**
+
+---
+
+## Local preview
+
 ```bash
 npm run build
 npm run preview
