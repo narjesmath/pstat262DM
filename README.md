@@ -18,6 +18,8 @@ A Reveal.js presentation on **Aich et al.** — conditional diffusion models for
 
 [View presentation →](https://narjesmath.github.io/pstat262DM/)
 
+**GitHub Pages setup:** Repo → Settings → Pages → Source: **Deploy from a branch** → Branch: **gh-pages** → Save.
+
 ---
 
 ## Quick Start
