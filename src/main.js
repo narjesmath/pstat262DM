@@ -241,7 +241,7 @@ document.querySelector('#app').innerHTML = `
               <li><strong>$\\varepsilon$</strong> — standard Gaussian noise</li>
             </ul>
             <figure class="dm-card-gif mt-sm">
-              <img src="/img/gradual-image-noise-addition-over-time.gif" alt="Gradual noise addition over time">
+              <img src="${import.meta.env.BASE_URL}img/gradual-image-noise-addition-over-time.gif" alt="Gradual noise addition over time">
               <figcaption>Fig. 3. Forward process: gradual addition of Gaussian noise over time steps.</figcaption>
             </figure>
           </div>
